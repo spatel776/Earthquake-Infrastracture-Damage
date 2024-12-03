@@ -10,7 +10,7 @@ The EID dataset is a novel 4-class Earthquake Infrastructure Damage (EID) assess
 
 •	**Irrelevant or Non-Informative to Infrastructure Damage Assessment (DS0)**: No recognizable infrastructure exists in the image. For example, an image shows advertising, banners, logos, cartoons, or blurred.
 
-•	**No damage (DS1)**: Images that show disaster-damage-free infrastructure belong to the little-or-no-damage category. 
+•	**No damage (DS1)**: Images that show disaster-damage-free infrastructure belong to the No damage category. 
 
 •	**Mild damage (DS2)**: Partially destroyed buildings, bridges, houses, and roads belong to the mild damage category. The infrastructure in the image shows disaster damage up to 50%. The infrastructure **remains life-safe and stable**.  
 
