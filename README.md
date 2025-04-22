@@ -80,6 +80,8 @@ The performance of baseline model are listed below. The model parameters are ini
 | SwinV2-S         | 91.7         | 91.1         |
 | SwinV2-B         | 91.0         | 90.5         |
 
+## Checkpoint
+Under construction...
 
 ## License
 
@@ -87,7 +89,7 @@ The EID dataset is published under CC BY-NC-SA 4.0 license, which means everyone
 
 ## Contact
 
-Huili Huang - huilihuang1997@gmail.com
+Huili Huang - huilihuang1997@gmail.com; hhuang413@gatech.edu
 
 Please ⭐ if you find it useful so that I find the motivation to keep improving this. Thanks
 
