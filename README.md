@@ -3,7 +3,7 @@
 Welcome to the repo of the Earthquake Infrastructure Damage (EID) assessment dataset. This repo provide an easy-to-use implementation for training and testing the EID dataset based on different deep learning models, allowing you to train it for other tasks effectively.
 
 # Data Download
-Please find the EID dataset in DesignSafe: []
+Please find the EID dataset in DesignSafe: https://www.designsafe-ci.org/data/browser/public/designsafe.storage.published/PRJ-5748/#detail-0989c54e-4865-4b39-8c44-7d8a88ca8ebb
 
 ## EID
 The EID dataset is a novel 4-class Earthquake Infrastructure Damage (EID) assessment dataset compiled from a combination of images from several other social media image databases but with added emphasis on data quality. The labels description are as follows:
