@@ -1,6 +1,7 @@
 from torchvision import models
 import torch.nn as nn
 from efficientnet_pytorch import EfficientNet
+from open_clip import create_model_and_transforms, get_tokenizer
 
 import timm
 
@@ -178,6 +179,35 @@ def initialize_model(model_name, num_classes, keep_frozen=False, use_pretrained=
         model._fc = nn.Linear(num_features, num_classes)
         input_image_size = 224
         resize_image_size = 256
+    
+    elif model_name == "clip_vitb32":
+        print("load clip vitb32 model")
+        clip_model, _, _ = create_model_and_transforms("ViT-B-32", pretrained="openai")
+        image_encoder = clip_model.visual
+        for param in image_encoder.parameters():
+            # Keep frozen for now on small computer, when I have a better GPU, I will unfreeze
+            param.requires_grad = not keep_frozen
+        
+        embed_dim = clip_model.visual.proj.shape[1]
+
+        class CLIPClassifier(nn.Module):
+            def __init__(self, image_encoder, embed_dim, num_classes):
+                super().__init__()
+                self.image_encoder = image_encoder
+                self.dropout = nn.Dropout(p=0.3)
+                self.classifier = nn.Linear(embed_dim, num_classes)
+
+            def forward(self, x):
+                x = self.image_encoder(x)
+                x = self.dropout(x)
+                x = self.classifier(x)
+                return x
+
+        model = CLIPClassifier(image_encoder, embed_dim, num_classes)
+        input_image_size = 224
+        resize_image_size = 256
+
+
     else:
         print("Invalid model name, exiting...", flush=True)
         exit()
