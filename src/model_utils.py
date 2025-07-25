@@ -196,6 +196,9 @@ def initialize_model(model_name, num_classes, keep_frozen=False, use_pretrained=
                 self.image_encoder = image_encoder
                 self.dropout = nn.Dropout(p=0.3)
                 self.classifier = nn.Linear(embed_dim, num_classes)
+                nn.init.xavier_uniform_(self.classifier.weight)
+                nn.init.zeros_(self.classifier.bias)
+
 
             def forward(self, x):
                 x = self.image_encoder(x)
