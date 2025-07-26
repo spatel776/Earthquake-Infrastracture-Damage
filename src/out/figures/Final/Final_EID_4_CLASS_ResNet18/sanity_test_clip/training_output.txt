@@ -1,0 +1,6 @@
+This will be written to the file.
+load clip vitb32 model
+Initializing Datasets and Dataloaders...
+No checkpoint found.
+Epoch 0/0
+----------

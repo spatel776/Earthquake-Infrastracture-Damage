@@ -1,0 +1,23 @@
+---------------------------------------
+Begin Slurm Prolog: Jul-25-2025 16:51:15
+Job ID:    6061530
+User ID:   spatel776
+Account:   gts-mroozbahani3
+Job name:  clip_train
+Partition: gpu-rtx6000
+QOS:       embers
+---------------------------------------
+Using device: cuda:0
+Namespace(name='final_clip_run', seed=42, num_class=4, train='../data/labels/label_final_train.tsv', dev='../data/labels/label_final_val.tsv', test='../data/labels/label_final_test.tsv', out_file='out/Final/Final_EID_4_CLASS_ResNet18/Final_EID_4_CLASS_ResNet18.json', sep='\t', data_dir='../data/images/', best_state_path='models/best.pth', fig_dir='out/figures/Final/Final_EID_4_CLASS_ResNet18', checkpoint_dir='out/models', arch='clip_vitb32', batch_size=32, learning_rate=0.0001, weight_decay=0, num_epochs=10, use_rand_augment=True, keep_frozen=True, rand_augment_n=2, rand_augment_m=9, three_class=False)
+---------------------------------------
+Begin Slurm Epilog: Jul-25-2025 17:04:49
+Job ID:        6061530
+User ID:       spatel776
+Account:       gts-mroozbahani3
+Job name:      clip_train
+Resources:     cpu=12,gres/gpu:rtx_6000=2,mem=64G,node=1
+Rsrc Used:     cput=02:42:48,vmem=0,walltime=00:13:34,mem=9025072K,energy_used=0
+Partition:     gpu-rtx6000
+QOS:           embers
+Nodes:         atl1-1-03-006-3-0
+---------------------------------------
