@@ -1,0 +1,22 @@
+---------------------------------------
+Begin Slurm Prolog: Jul-28-2025 16:44:07
+Job ID:    6155782
+User ID:   spatel776
+Account:   gts-mroozbahani3
+Job name:  clip_train
+Partition: gpu-rtx6000
+QOS:       inferno
+---------------------------------------
+Using device: cuda:0
+---------------------------------------
+Begin Slurm Epilog: Jul-28-2025 17:37:10
+Job ID:        6155782
+User ID:       spatel776
+Account:       gts-mroozbahani3
+Job name:      clip_train
+Resources:     cpu=12,gres/gpu:rtx_6000=2,mem=64G,node=1
+Rsrc Used:     cput=10:36:36,vmem=0,walltime=00:53:03,mem=449520K,energy_used=0
+Partition:     gpu-rtx6000
+QOS:           inferno
+Nodes:         atl1-1-03-007-3-0
+---------------------------------------

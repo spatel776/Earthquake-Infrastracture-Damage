@@ -2,7 +2,7 @@
 #SBATCH --job-name=clip_train
 #SBATCH --account=gts-mroozbahani3
 #SBATCH --partition=gpu-rtx6000
-#SBATCH --qos=embers
+#SBATCH --qos=inferno
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --gres=gpu:2
@@ -22,13 +22,15 @@ conda activate clip-env
 # cd src
 
 python train_models.py --arch clip_vitb32 \
-  --name final_clip_run \
+  --name CLIP_unfrozen_16_epochs_5e-3_lr \
   --train ../data/labels/label_final_train.tsv \
   --dev ../data/labels/label_final_val.tsv \
   --test ../data/labels/label_final_test.tsv \
   --num-class 4 \
   --batch-size 32 \
-  --num-epochs 10 \
-  --learning-rate 1e-4 \
-  --keep-frozen True \
-  --data-dir ../data/images/ 
+  --num-epochs 16 \
+  --learning-rate 5e-3 \
+  --keep-frozen False \
+  --data-dir ../data/images/ \
+  --out-file out/CLIP_unfrozen_16_epochs_5e-3_lr.json \
+  --fig-dir out/figures/CLIP_unfrozen_16_epochs_5e-3_lr

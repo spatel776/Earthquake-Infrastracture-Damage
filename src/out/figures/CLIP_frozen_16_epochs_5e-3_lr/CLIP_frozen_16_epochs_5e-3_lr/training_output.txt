@@ -1,0 +1,162 @@
+This will be written to the file.
+load clip vitb32 model
+Initializing Datasets and Dataloaders...
+No checkpoint found.
+Let's use 2 GPUs!
+Epoch 0/15
+----------
+ Loss: 0.5362 Acc: 0.7949 lr: 5.0000E-03
+ Loss: 0.3751 Acc: 0.8706 lr: 5.0000E-03
+
+Epoch 1/15
+----------
+ Loss: 0.4648 Acc: 0.8244 lr: 5.0000E-03
+ Loss: 0.3787 Acc: 0.8565 lr: 5.0000E-03
+
+Epoch 2/15
+----------
+ Loss: 0.4593 Acc: 0.8261 lr: 5.0000E-03
+ Loss: 0.3733 Acc: 0.8632 lr: 5.0000E-03
+
+Epoch 3/15
+----------
+ Loss: 0.4640 Acc: 0.8218 lr: 5.0000E-03
+ Loss: 0.3548 Acc: 0.8691 lr: 5.0000E-03
+
+Epoch 4/15
+----------
+ Loss: 0.4510 Acc: 0.8267 lr: 5.0000E-03
+ Loss: 0.3684 Acc: 0.8632 lr: 5.0000E-03
+
+Epoch 5/15
+----------
+ Loss: 0.4534 Acc: 0.8279 lr: 5.0000E-03
+ Loss: 0.3550 Acc: 0.8646 lr: 5.0000E-03
+
+Epoch 6/15
+----------
+ Loss: 0.4630 Acc: 0.8273 lr: 5.0000E-03
+ Loss: 0.3589 Acc: 0.8706 lr: 5.0000E-03
+
+Epoch 7/15
+----------
+ Loss: 0.4575 Acc: 0.8241 lr: 5.0000E-03
+ Loss: 0.3511 Acc: 0.8780 lr: 5.0000E-03
+
+Epoch 8/15
+----------
+ Loss: 0.4613 Acc: 0.8257 lr: 5.0000E-03
+ Loss: 0.3684 Acc: 0.8669 lr: 5.0000E-03
+
+Epoch 9/15
+----------
+ Loss: 0.4619 Acc: 0.8221 lr: 5.0000E-03
+ Loss: 0.3472 Acc: 0.8765 lr: 5.0000E-03
+
+Epoch 10/15
+----------
+ Loss: 0.4551 Acc: 0.8335 lr: 5.0000E-03
+ Loss: 0.3611 Acc: 0.8728 lr: 5.0000E-03
+
+Epoch 11/15
+----------
+ Loss: 0.4646 Acc: 0.8213 lr: 5.0000E-03
+ Loss: 0.3493 Acc: 0.8750 lr: 5.0000E-03
+
+Epoch 12/15
+----------
+ Loss: 0.4612 Acc: 0.8280 lr: 5.0000E-03
+ Loss: 0.3552 Acc: 0.8698 lr: 5.0000E-03
+
+Epoch 13/15
+----------
+ Loss: 0.4532 Acc: 0.8346 lr: 5.0000E-03
+ Loss: 0.3509 Acc: 0.8676 lr: 5.0000E-03
+
+Epoch 14/15
+----------
+ Loss: 0.4581 Acc: 0.8250 lr: 5.0000E-03
+ Loss: 0.3510 Acc: 0.8802 lr: 5.0000E-03
+
+Epoch 15/15
+----------
+ Loss: 0.4560 Acc: 0.8280 lr: 5.0000E-03
+ Loss: 0.3574 Acc: 0.8713 lr: 5.0000E-03
+
+Training complete in 1:01:55
+Best Val Accuracy: 0.8802
+Testing the model on both data splits:
+----------
+Performance on TRAIN set:
+Accuracy: 0.8572
+              precision    recall  f1-score   support
+
+           0      0.804     0.839     0.821      2284
+           1      0.793     0.810     0.801      2903
+           2      0.597     0.121     0.201       381
+           3      0.919     0.945     0.932      5242
+
+    accuracy                          0.857     10810
+   macro avg      0.779     0.679     0.689     10810
+weighted avg      0.850     0.857     0.848     10810
+
+[[1916  315    0   53]
+ [ 371 2350    7  175]
+ [  15  113   46  207]
+ [  80  184   24 4954]]
+----------
+0.857	0.850	0.857	0.848
+
+----------
+Performance on VAL set:
+Accuracy: 0.8802
+              precision    recall  f1-score   support
+
+           0      0.853     0.871     0.862       286
+           1      0.826     0.876     0.850       363
+           2      0.667     0.085     0.151        47
+           3      0.925     0.944     0.934       656
+
+    accuracy                          0.880      1352
+   macro avg      0.818     0.694     0.699      1352
+weighted avg      0.874     0.880     0.869      1352
+
+[[249  31   0   6]
+ [ 31 318   0  14]
+ [  2  11   4  30]
+ [ 10  25   2 619]]
+----------
+0.880	0.874	0.880	0.869
+
+There are 1351 test images.
+Testing the model and saving the results:
+Test complete in 0:02:50
+Performance results:
+Accuracy: 0.8616
+              precision    recall  f1-score   support
+
+           0      0.805     0.828     0.817       285
+           1      0.801     0.796     0.798       363
+           2      0.625     0.109     0.185        46
+           3      0.920     0.965     0.942       657
+
+    accuracy                          0.862      1351
+   macro avg      0.788     0.674     0.686      1351
+weighted avg      0.854     0.862     0.851      1351
+
+[[236  39   0  10]
+ [ 49 289   2  23]
+ [  0  19   5  22]
+ [  8  14   1 634]]
+----------
+
+0.862	0.854	0.862	0.851
+
+Pred
+Gold	0	1	2	3	All
+0	236	39	0	10	285
+1	49	289	2	23	363
+2	0	19	5	22	46
+3	8	14	1	634	657
+All	293	361	8	689	1351
+

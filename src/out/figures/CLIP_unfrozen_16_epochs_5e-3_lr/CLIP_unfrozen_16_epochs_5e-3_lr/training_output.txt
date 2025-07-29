@@ -1,0 +1,162 @@
+This will be written to the file.
+load clip vitb32 model
+Initializing Datasets and Dataloaders...
+No checkpoint found.
+Let's use 2 GPUs!
+Epoch 0/15
+----------
+ Loss: 2.2189 Acc: 0.4165 lr: 5.0000E-03
+ Loss: 1.1964 Acc: 0.2685 lr: 5.0000E-03
+
+Epoch 1/15
+----------
+ Loss: 1.1779 Acc: 0.4747 lr: 5.0000E-03
+ Loss: 1.1644 Acc: 0.4852 lr: 5.0000E-03
+
+Epoch 2/15
+----------
+ Loss: 1.1656 Acc: 0.4858 lr: 5.0000E-03
+ Loss: 1.1513 Acc: 0.5022 lr: 5.0000E-03
+
+Epoch 3/15
+----------
+ Loss: 1.1561 Acc: 0.4916 lr: 5.0000E-03
+ Loss: 1.1265 Acc: 0.4963 lr: 5.0000E-03
+
+Epoch 4/15
+----------
+ Loss: 1.1375 Acc: 0.5007 lr: 5.0000E-03
+ Loss: 1.1225 Acc: 0.5163 lr: 5.0000E-03
+
+Epoch 5/15
+----------
+ Loss: 1.1309 Acc: 0.5043 lr: 5.0000E-03
+ Loss: 1.1102 Acc: 0.5163 lr: 5.0000E-03
+
+Epoch 6/15
+----------
+ Loss: 1.1257 Acc: 0.5027 lr: 5.0000E-03
+ Loss: 1.1157 Acc: 0.5067 lr: 5.0000E-03
+
+Epoch 7/15
+----------
+ Loss: 1.1243 Acc: 0.5036 lr: 5.0000E-03
+ Loss: 1.1278 Acc: 0.5044 lr: 5.0000E-03
+
+Epoch 8/15
+----------
+ Loss: 1.1211 Acc: 0.5080 lr: 5.0000E-03
+ Loss: 1.1028 Acc: 0.5111 lr: 5.0000E-03
+
+Epoch 9/15
+----------
+ Loss: 1.1124 Acc: 0.5101 lr: 5.0000E-03
+ Loss: 1.0813 Acc: 0.5281 lr: 5.0000E-03
+
+Epoch 10/15
+----------
+ Loss: 1.1142 Acc: 0.5093 lr: 5.0000E-03
+ Loss: 1.1059 Acc: 0.5311 lr: 5.0000E-03
+
+Epoch 11/15
+----------
+ Loss: 1.1145 Acc: 0.5143 lr: 5.0000E-03
+ Loss: 1.0886 Acc: 0.5229 lr: 5.0000E-03
+
+Epoch 12/15
+----------
+ Loss: 1.1089 Acc: 0.5111 lr: 5.0000E-03
+ Loss: 1.1042 Acc: 0.5274 lr: 5.0000E-03
+
+Epoch 13/15
+----------
+ Loss: 1.1090 Acc: 0.5093 lr: 5.0000E-03
+ Loss: 1.0735 Acc: 0.5266 lr: 5.0000E-03
+
+Epoch 14/15
+----------
+ Loss: 1.1142 Acc: 0.5065 lr: 5.0000E-03
+ Loss: 1.0816 Acc: 0.5303 lr: 5.0000E-03
+
+Epoch 15/15
+----------
+ Loss: 1.1089 Acc: 0.5132 lr: 5.0000E-03
+ Loss: 1.0782 Acc: 0.5414 lr: 5.0000E-03
+
+Training complete in 0:59:29
+Best Val Accuracy: 0.5414
+Testing the model on both data splits:
+----------
+Performance on TRAIN set:
+Accuracy: 0.5241
+              precision    recall  f1-score   support
+
+           0      0.484     0.341     0.400      2284
+           1      0.000     0.000     0.000      2903
+           2      0.000     0.000     0.000       381
+           3      0.531     0.932     0.677      5242
+
+    accuracy                          0.524     10810
+   macro avg      0.254     0.318     0.269     10810
+weighted avg      0.360     0.524     0.413     10810
+
+[[ 779    0    0 1505]
+ [ 427    0    0 2476]
+ [  47    0    0  334]
+ [ 356    0    0 4886]]
+----------
+0.524	0.360	0.524	0.413
+
+----------
+Performance on VAL set:
+Accuracy: 0.5414
+              precision    recall  f1-score   support
+
+           0      0.557     0.392     0.460       286
+           1      0.000     0.000     0.000       363
+           2      0.000     0.000     0.000        47
+           3      0.539     0.945     0.686       656
+
+    accuracy                          0.541      1352
+   macro avg      0.274     0.334     0.287      1352
+weighted avg      0.379     0.541     0.430      1352
+
+[[112   0   0 174]
+ [ 49   0   0 314]
+ [  4   0   0  43]
+ [ 36   0   0 620]]
+----------
+0.541	0.379	0.541	0.430
+
+There are 1351 test images.
+Testing the model and saving the results:
+Test complete in 0:02:00
+Performance results:
+Accuracy: 0.5359
+              precision    recall  f1-score   support
+
+           0      0.514     0.375     0.434       285
+           1      0.000     0.000     0.000       363
+           2      0.000     0.000     0.000        46
+           3      0.540     0.939     0.686       657
+
+    accuracy                          0.536      1351
+   macro avg      0.264     0.329     0.280      1351
+weighted avg      0.371     0.536     0.425      1351
+
+[[107   0   0 178]
+ [ 55   0   0 308]
+ [  6   0   0  40]
+ [ 40   0   0 617]]
+----------
+
+0.536	0.371	0.536	0.425
+
+Pred
+Gold	0	3	All
+0	107	178	285
+1	55	308	363
+2	6	40	46
+3	40	617	657
+All	208	1143	1351
+
